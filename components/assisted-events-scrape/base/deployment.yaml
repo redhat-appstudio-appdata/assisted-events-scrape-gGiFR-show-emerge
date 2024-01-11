@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: assisted-events-scrape
     spec:
       containers:
-      - image: image
+      - image: quay.io/redhat-user-workloads/ergonzale-tenant/assisted-events-scrape/assisted-events-scrape@sha256:35eb35c942ba4080f858278829b1e7c191daff8b375b43d330d42ca2ab5174d7
         imagePullPolicy: Always
         name: container-image
         ports:
