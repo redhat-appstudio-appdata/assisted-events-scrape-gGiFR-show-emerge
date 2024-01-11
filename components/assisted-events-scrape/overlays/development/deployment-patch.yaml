@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: assisted-events-scrape
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/ergonzale-tenant/assisted-events-scrape/assisted-events-scrape@sha256:35eb35c942ba4080f858278829b1e7c191daff8b375b43d330d42ca2ab5174d7
+        name: container-image
+        resources: {}
+status: {}

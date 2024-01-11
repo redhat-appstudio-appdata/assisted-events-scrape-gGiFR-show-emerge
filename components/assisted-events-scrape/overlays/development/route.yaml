@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: assisted-events-scrape
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: assisted-events-scrape
+    app.kubernetes.io/part-of: assisted-events-scrape
+  name: assisted-events-scrape77wp
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: assisted-events-scrape
+    weight: 100
+status: {}
